@@ -1,0 +1,12 @@
+{
+    "name": "nameplayer/webtools",
+    "type": "project",
+    "require": {
+      "ext-ssh2": "*",
+      "ext-openssl": "*",
+        "phpseclib/phpseclib": "~3.0",
+        "endroid/qr-code": "^3.9",
+      "ext-fileinfo": "*",
+      "ext-exif": "*"
+    }
+}
