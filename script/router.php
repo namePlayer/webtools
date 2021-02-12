@@ -90,7 +90,7 @@ if(strpos($requestedUrl, '/readfile/') !== FALSE) {
 }
 
 if(strpos($requestedUrl, '/servers') !== FALSE) {
-    if(!isLoggedIn()) {
+    if(!isLoggedIn() || !$accountManager->isAdmin()) {
         header("Location: ".$requestedPath."/login/");
 
         exit();
@@ -114,7 +114,7 @@ if(strpos($requestedUrl, '/status') !== FALSE) {
 }
 
 if(strpos($requestedUrl, '/admin-changelog') !== FALSE) {
-    if(!isLoggedIn()) {
+    if(!isLoggedIn() || !$accountManager->isAdmin()) {
         header("Location: ".$requestedPath."/login/");
 
         exit();
@@ -126,7 +126,7 @@ if(strpos($requestedUrl, '/admin-changelog') !== FALSE) {
 }
 
 if(strpos($requestedUrl, '/accounts') !== FALSE) {
-    if(!isLoggedIn()) {
+    if(!isLoggedIn() || !$accountManager->isAdmin()) {
         header("Location: ".$requestedPath."/login/");
 
         exit();
@@ -138,7 +138,7 @@ if(strpos($requestedUrl, '/accounts') !== FALSE) {
 }
 
 if(strpos($requestedUrl, '/manageaccount/') !== FALSE) {
-    if(!isLoggedIn()) {
+    if(!isLoggedIn() || !$accountManager->isAdmin()) {
         header("Location: ".$requestedPath."/login/");
 
         exit();
@@ -150,7 +150,7 @@ if(strpos($requestedUrl, '/manageaccount/') !== FALSE) {
 }
 
 if(strpos($requestedUrl, '/adminstatus') !== FALSE) {
-    if(!isLoggedIn()) {
+    if(!isLoggedIn() || !$accountManager->isAdmin()) {
         header("Location: ".$requestedPath."/login/");
 
         exit();
@@ -162,7 +162,7 @@ if(strpos($requestedUrl, '/adminstatus') !== FALSE) {
 }
 
 if(strpos($requestedUrl, '/editstatus/') !== FALSE) {
-    if(!isLoggedIn()) {
+    if(!isLoggedIn() || !$accountManager->isAdmin()) {
         header("Location: ".$requestedPath."/login/");
 
         exit();
